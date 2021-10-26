@@ -1,1 +1,1 @@
-default_app_config = 'authanon.apps.AuthanonConfig'
+default_app_config = "authanon.apps.AuthanonConfig"
