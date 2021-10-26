@@ -43,4 +43,5 @@ By default, the two groups are called `Anonymous` and `Login Users`. You can cha
 
 ## Credits
 Package authored by Robert Turnbull (Melbourne Data Analytics Platform)
-Inspired by this Stack Overflow answer: https://stackoverflow.com/a/31520798
+
+Inspired by this Stack Overflow answer: https://stackoverflow.com/a/31520798 (User: jozxyqk)
