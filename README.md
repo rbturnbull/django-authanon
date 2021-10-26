@@ -12,14 +12,14 @@ Allows permissions for an anonymous user and a generic signed-in user to be set 
 pip install django-authanon
 ```
 
-Then add to your installed apps:
+Then add to your `INSTALLED_APPS`:
 ```
 INSTALLED_APPS += [
     "authanon",
 ]
 ```
 
-Then add to your installed apps:
+Then add to your `AUTHENTICATION_BACKENDS`:
 ```
 AUTHENTICATION_BACKENDS += [
     "authanon.backends.AuthanonBackend",
