@@ -29,6 +29,19 @@ AUTHENTICATION_BACKENDS += [
 
 ## Usage
 
+This app creates two groups, one for anonymous users who aren't logged in and one group for users who are logged in. You can add permissions to these groups in the admin console in the 'Groups' section under the 'AUTHENTICATION AND AUTHORIZATION' section.
 
+To display the permissions for these two groups on the command line, use this command.
+```
+./manage.py authanon
+```
+
+These groups are automatically created when anonymous users or logged-in users try to access pages. If you find they haven't been created yet, use the `./manage.py authanon` command and then the groups will appear in the admin.
 
 ## Configuration
+By default, the two groups are called `Anonymous` and `Login Users`. You can change them by variables to the settings with the names `AUTHANON_ANONYMOUS_GROUP` or `AUTHANON_LOGIN_GROUP`.
+
+
+## Credits
+Package authored by Robert Turnbull (Melbourne Data Analytics Platform)
+Inspired by this Stack Overflow answer: https://stackoverflow.com/a/31520798
