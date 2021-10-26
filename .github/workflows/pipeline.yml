@@ -24,22 +24,5 @@ jobs:
         poetry install
     - name: Coverage
       run: |
-        poetry run coverage run ./runtests.py
-        poetry run coverage report
-        echo "COVERAGE=$(poetry run coverage report --precision 2 | grep TOTAL | tr -s ' ' | cut -f 4 -d " ")" >> $GITHUB_ENV
-    - name: Create Badge
-      uses: schneegans/dynamic-badges-action@v1.1.0
-      with:
-        auth: ${{ secrets.GIST_SECRET }}
-        gistID: 49262550cc8b0fb671d46df58de213d4
-        filename: django-authanon-coverage.json
-        label: coverage
-        message: ${{ env.COVERAGE }}
-        color: green
-
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@4.1.5
-      with:
-        branch: gh-pages # The branch the action should deploy to.
-        folder: htmlcov # The folder the action should deploy.
+        poetry run ./runtests.py
 
